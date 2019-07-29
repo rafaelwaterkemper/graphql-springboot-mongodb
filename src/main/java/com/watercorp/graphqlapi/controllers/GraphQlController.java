@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserController {
+public class GraphQlController {
 
     private GraphQL graphQL;
     private GraphQlUtility graphQlUtility;
 
-    public UserController(GraphQL graphQL, GraphQlUtility graphQlUtility) {
+    public GraphQlController(GraphQL graphQL, GraphQlUtility graphQlUtility) {
         this.graphQL = graphQL;
         this.graphQlUtility = graphQlUtility;
     }
