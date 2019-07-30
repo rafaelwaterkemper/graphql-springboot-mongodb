@@ -3,7 +3,7 @@ package com.watercorp.graphqlapi.models;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "articles")
+@Document(collection = "Article")
 public class Article {
 
     private ObjectId id;

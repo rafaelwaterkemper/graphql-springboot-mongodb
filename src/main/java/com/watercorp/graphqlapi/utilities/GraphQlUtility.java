@@ -10,6 +10,7 @@ import graphql.schema.idl.SchemaGenerator;
 import graphql.schema.idl.SchemaParser;
 import graphql.schema.idl.TypeDefinitionRegistry;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
@@ -35,6 +36,7 @@ public class GraphQlUtility {
     }
 
     @PostConstruct
+    @Bean
     public GraphQL createGraphQlObject() throws IOException {
         File schemas = schemaResource.getFile();
         TypeDefinitionRegistry typeRegistry = new SchemaParser().parse(schemas);

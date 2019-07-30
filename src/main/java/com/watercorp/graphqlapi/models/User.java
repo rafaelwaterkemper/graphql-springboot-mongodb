@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Document(collection = "users")
+@Document(collection = "User")
 public class User {
 
     private ObjectId id;
@@ -77,5 +77,36 @@ public class User {
 
     public void setArticlesIds(List<String> articlesIds) {
         this.articlesIds = articlesIds;
+    }
+
+    public static class Builder extends AbstractBuilder<User, Builder> {
+
+        Builder(User user) {
+            super(user);
+        }
+
+        public static Builder create() {
+            return new Builder(new User());
+        }
+
+        public Builder name(String name) {
+            entity.name = name;
+            return this;
+        }
+
+        public Builder age(int age) {
+            entity.age = age;
+            return this;
+        }
+
+        public Builder nationality(String nationality) {
+            entity.nationality = nationality;
+            return this;
+        }
+
+        public Builder friendsIds(List<String> friendsIds) {
+            entity.friendsIds = friendsIds;
+            return this;
+        }
     }
 }
