@@ -21,7 +21,7 @@ import java.io.IOException;
 @Component
 public class GraphQlUtility {
 
-    @Value("classpath:schemas.graphqls")
+    @Value("classpath:graphql/schemas.graphqls")
     private Resource schemaResource;
     private GraphQL graphQL;
     private AllUsersDataFetcher allUsersDataFetcher;

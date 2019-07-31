@@ -19,7 +19,7 @@ public class GraphQlController {
         this.graphQlUtility = graphQlUtility;
     }
 
-    @PostMapping("/query")
+    @PostMapping("/graphql")
     public ResponseEntity query(@RequestBody String query) {
         ExecutionResult executionResult = graphQL.execute(query);
         System.out.println(executionResult.getErrors());

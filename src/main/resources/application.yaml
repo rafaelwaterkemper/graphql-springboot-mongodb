@@ -4,3 +4,9 @@ spring:
       host: localhost
       port: 27017
       database: graphql
+
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
